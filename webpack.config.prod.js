@@ -40,7 +40,8 @@ export default {
     new webpack.DefinePlugin(GLOBALS),
 
     // Generate an external css file with a hash in the filename
-    new ExtractTextPlugin('[name].[contenthash].css'),
+    // new ExtractTextPlugin('[name].[contenthash].css'),
+    new ExtractTextPlugin('styles.[contenthash].css'),
 
     // Use CommonChunkPlugin to create a seperate bundle of vendor libs
     // so they are cached properly
