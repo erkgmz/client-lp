@@ -1,8 +1,9 @@
+@import './variables';
+
 .Home {
-  border: 1px solid red;
   text-align: center;
 
   h1 {
-    color: blue;
+    color: $theme-text-color;
   }
 }

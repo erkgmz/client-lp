@@ -1,0 +1,11 @@
+@import './variables';
+
+.Header {
+  background-color: $theme-secondary;
+  display: flex;
+
+  a {
+    align-self: flex-end;
+  }
+
+}

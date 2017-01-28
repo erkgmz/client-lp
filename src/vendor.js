@@ -15,6 +15,5 @@
 
 /* eslint-disable no-unused-vars */
 
-// angular, react, jquery?
 import fetch from 'whatwg-fetch';
 
