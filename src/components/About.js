@@ -2,8 +2,10 @@ import React from 'react';
 
 const About = () => {
   return (
-    <h2>ABOUT MEEE!!!</h2>
+    <section>
+      <h2>ABOUT MEEE!!!</h2>
+    </section>
   );
-}
+};
 
 export default About;

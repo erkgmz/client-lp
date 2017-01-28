@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
-import Contact from './components/Contact';
+import Contact from './containers/Contact';
 // import { Router, browserHistory } from 'react-router';
 // import routes from './routes';
 
@@ -17,6 +17,6 @@ render(
     <About />
     <Work />
     <Contact />
-  </div>,
-  root);
+  </div>
+  , root);
 // render(<Router history={browserHistory} routes={routes} />, root);
