@@ -4,11 +4,21 @@ const ContactForm = props => {
   return (
     <form>
       <label htmlFor="name">First Name:
-        <input type="text" name="name" onChange={props.onChange} />
+        <input
+          type="text"
+          name="name"
+          onChange={props.onChange}
+        />
       </label>
+
       <label htmlFor="email">Email:
-        <input type="email" name="email" onChange={props.onChange} />
+        <input
+          type="email"
+          name="email"
+          onChange={props.onChange}
+        />
       </label>
+
       <label htmlFor="message">Message:
         <textarea type="text" name="message" onChange={props.onChange} />
       </label>

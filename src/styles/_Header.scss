@@ -3,9 +3,15 @@
 .Header {
   background-color: $theme-secondary;
   display: flex;
+  flex-flow: row nowrap;
+
+  h2 {
+    flex: 1 0 auto;
+  }
 
   a {
-    align-self: flex-end;
+    flex: 0 1 auto;
+    align-self: center;
   }
 
 }

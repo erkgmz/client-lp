@@ -5,7 +5,8 @@ import styles from  '../styles/_Home.scss';
 const Home = () => {
   return (
     <section className={styles.Home}>
-      <h1>Hello World!</h1>
+      <h2>Hi! I'm Kailey</h2>
+      <h4>Lorem Ipsum dolos sit Amet. Un ninca</h4>
     </section>
   );
 };

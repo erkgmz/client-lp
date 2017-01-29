@@ -7,9 +7,7 @@ const Header = () => {
   return (
     <header className={style.Header}>
       <h2>Kailey Stein</h2>
-      <a>
-        <p>H</p>
-      </a>
+      <a>HAM</a>
       {/*<nav>
         <Navigation />
       </nav>*/}

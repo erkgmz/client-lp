@@ -1,0 +1,41 @@
+@import 'normalize.css/normalize.css';
+@import './variables';
+
+html,
+body {
+  height: 100%;
+  font-size: $font-size-root;
+}
+
+body {
+  color: $theme-text-color;
+  background-color: $theme-primary;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 90vh;
+  border: 1px solid black;
+}
+
+header {
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: $headline;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: $subheader;
+  font-weight: bold;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2rem;
+}
