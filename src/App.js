@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import Header from './components/Header';
+import React, { PropTypes } from 'react';
+import Header from './components/common/Header';
 
 import './styles/_base.scss';
 

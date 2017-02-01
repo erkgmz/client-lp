@@ -40,6 +40,7 @@ h6 {
 h1 {
   font-size: $headline-font-size;
   font-weight: bold;
+  margin: auto;
 }
 
 h2 {
@@ -56,6 +57,11 @@ h6 {
 }
 
 p,
+input {
+  font-size: 1.3rem;
+}
+
+p,
 a,
 input {
   font-family: 'Raleway', sans-serif;
@@ -63,4 +69,5 @@ input {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }

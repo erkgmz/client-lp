@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router';
 // import Navigation from './Navigation';
 
-import style from '../styles/_Header.scss';
+import style from '../../styles/_Header.scss';
 
 const Header = () => {
   return (
     <header className={style.Header}>
     <div className={style.innerWrapper}>
       <h2>
-        <a href="#">Kailey Stein</a>
+        <Link to="/">Kailey Stein</Link>
       </h2>
 
       <a>HAM</a>
