@@ -1,17 +1,23 @@
 @import './variables';
 
 .Header {
+  position: fixed;
+  width: 100%;
   background-color: $theme-secondary;
-  display: flex;
-  flex-flow: row nowrap;
 
-  h2 {
-    flex: 1 0 auto;
+  .innerWrapper {
+    padding: 0 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+
+    h2 {
+      flex: 1 0 auto;
+      font-size: 2rem;
+    }
+
+    a {
+      flex: 0 1 auto;
+      align-self: center;
+    }
   }
-
-  a {
-    flex: 0 1 auto;
-    align-self: center;
-  }
-
 }

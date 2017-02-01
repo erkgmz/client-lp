@@ -1,35 +1,49 @@
 @import 'normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700');
 @import './variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size-root;
+  overflow: hidden;
+}
 
 html,
 body {
   height: 100%;
-  font-size: $font-size-root;
 }
 
 body {
   color: $theme-text-color;
   background-color: $theme-primary;
+  overflow: auto;
 }
 
 section {
   display: flex;
   flex-flow: column nowrap;
-  min-height: 90vh;
-  border: 1px solid black;
+  min-height: 100vh;
 }
 
-header {
-  padding: 10px 20px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-  font-size: $headline;
+  font-size: $headline-font-size;
   font-weight: bold;
 }
 
 h2 {
-  font-size: $subheader;
+  font-size: $subheader-font-size;
   font-weight: bold;
 }
 
@@ -38,4 +52,15 @@ h4,
 h5,
 h6 {
   font-size: 2rem;
+  line-height: 2.7rem;
+}
+
+p,
+a,
+input {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  cursor: pointer;
 }

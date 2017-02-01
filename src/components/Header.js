@@ -6,11 +6,17 @@ import style from '../styles/_Header.scss';
 const Header = () => {
   return (
     <header className={style.Header}>
-      <h2>Kailey Stein</h2>
+    <div className={style.innerWrapper}>
+      <h2>
+        <a href="#">Kailey Stein</a>
+      </h2>
+
       <a>HAM</a>
+
       {/*<nav>
         <Navigation />
       </nav>*/}
+    </div>
     </header>
   );
 };

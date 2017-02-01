@@ -15,16 +15,16 @@ class Contact extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  onClick(event) {
-    event.preventDefault();
-
-    console.log('Clicked'); //eslint-disable-line
-  }
-
   onChange(event){
     event.preventDefault();
 
     console.log('Changed'); //eslint-disable-line
+  }
+
+  onClick(event) {
+    event.preventDefault();
+
+    console.log('Clicked'); //eslint-disable-line
   }
 
   render() {
