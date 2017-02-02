@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NavigationMenu from './NavigationMenu';
+import NavigationMenu from '../navigation/NavigationMenu';
 
 import style from '../../styles/_Header.scss';
 
@@ -13,7 +13,6 @@ const Header = () => {
         <h2>
           <Link to="/">Kailey Stein</Link>
         </h2>
-
         <NavigationMenu />
       </div>
     </header>
