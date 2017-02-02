@@ -1,0 +1,23 @@
+@import './variables';
+
+.NavigationMenu {
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 0;
+
+  li {
+      list-style: none;
+      margin: 3rem auto;
+
+      a {
+        color: $theme-text-color;
+        font-size: 2rem;
+      }
+    }
+
+  .active {
+    text-decoration: underline;
+  }
+}

@@ -1,5 +1,7 @@
 @import './variables';
 
+/* Major refactoring for integrating react-hamburger-menu */
+
 .Header {
   position: fixed;
   width: 100%;
@@ -13,11 +15,6 @@
     h2 {
       flex: 1 0 auto;
       font-size: 2rem;
-    }
-
-    a {
-      flex: 0 1 auto;
-      align-self: center;
     }
   }
 }
