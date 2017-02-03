@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from '../components/ContactForm';
+import ContactForm from './ContactForm';
 
 class Contact extends React.Component {
   constructor(props, context) {
@@ -31,7 +31,6 @@ class Contact extends React.Component {
     return (
       <section>
         <h3>Send me a message!</h3>
-        {/*<Social />*/}
         <ContactForm onClick={this.onClick} onChange={this.onChange} />
       </section>
     );

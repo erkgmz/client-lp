@@ -27,7 +27,7 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].[chunkhash].js'
+    filename: '[name].bundle.js'
   },
   plugins: [
     // Hash the files using MD5 so that their names change when the content changes.

@@ -6,7 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Work from './components/Work';
 import NotFound from './components/NotFound';
-import Contact from './containers/Contact';
+import Contact from './components/contact/Contact';
 
 export default (
   <Route path="/" component={App}>
