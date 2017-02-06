@@ -1,6 +1,8 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 
+import {postMessage} from '../../api/contactApi';
+
 class Contact extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -8,7 +10,8 @@ class Contact extends React.Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      subject: ''
     };
 
     this.onClick = this.onClick.bind(this);
@@ -23,6 +26,10 @@ class Contact extends React.Component {
 
   onClick(event) {
     event.preventDefault();
+
+    postMessage()
+    .then(response => console.log(response)) //eslint-disable-line
+    .catch(error => console.log(error)); //eslint-disable-line
 
     console.log('Clicked'); //eslint-disable-line
   }
