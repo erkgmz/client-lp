@@ -19,6 +19,13 @@ const ContactForm = props => {
         />
       </label>
 
+      <select>
+        <option value="Project Management">Project Management</option>
+        <option value="Launch Strategy">Launch Strategy</option>
+        <option value="Marketing Campaigns">Marketing Campaigns</option>
+        <option value="Other">Other</option>
+      </select>
+
       <label htmlFor="message">Message:
         <textarea type="text" name="message" onChange={props.onChange} />
       </label>

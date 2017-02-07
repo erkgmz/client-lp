@@ -1,4 +1,3 @@
-// mock API
 import 'whatwg-fetch';
 const mainApi = 'https://kailey-website-api.herokuapp.com/';
 
