@@ -1,0 +1,26 @@
+@import './variables';
+
+.Contact {
+  padding: 0 2rem;
+
+  .innerWrapper {
+    margin: auto;
+
+    form {
+      display: flex;
+      flex-flow: column nowrap;
+
+      label {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1rem 0;
+      }
+
+      input[type="submit"] {
+        background: $theme-accent;
+        border: none;
+        padding: 0.6rem;
+      }
+    }
+  }
+}

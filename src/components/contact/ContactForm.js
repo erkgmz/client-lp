@@ -7,27 +7,27 @@ const ContactForm = props => {
         <input
           type="text"
           name="name"
-          onChange={props.onChange}
-        />
+          onChange={props.onChange} />
       </label>
 
       <label htmlFor="email">Email:
         <input
           type="email"
           name="email"
-          onChange={props.onChange}
-        />
+          onChange={props.onChange} />
       </label>
 
-      <select>
-        <option value="Project Management">Project Management</option>
-        <option value="Launch Strategy">Launch Strategy</option>
-        <option value="Marketing Campaigns">Marketing Campaigns</option>
-        <option value="Other">Other</option>
-      </select>
+      <label htmlFor="subject">Subject:
+        <select name="subject">
+          <option value="Project Management">Project Management</option>
+          <option value="Launch Strategy">Launch Strategy</option>
+          <option value="Marketing Campaigns">Marketing Campaigns</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
 
       <label htmlFor="message">Message:
-        <textarea type="text" name="message" onChange={props.onChange} />
+        <textarea type="text" name="message" rows="3" onChange={props.onChange} />
       </label>
       <input type="submit" value="SEND" onClick={props.onClick} />
     </form>

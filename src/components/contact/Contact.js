@@ -3,20 +3,24 @@ import ContactForm from './ContactForm';
 
 import {postMessage} from '../../api/contactApi';
 
+import styles from '../../styles/_Contact.scss';
+
 class Contact extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      name: '',
-      email: '',
-      message: '',
+      name: 'Name',
+      email: 'Email',
+      message: 'Enter a message',
       subject: ''
     };
 
     this.onClick = this.onClick.bind(this);
     this.onChange = this.onChange.bind(this);
   }
+
+  // componentWillMount() {}
 
   onChange(event){
     event.preventDefault();
@@ -36,9 +40,13 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <section>
-        <h3>Send me a message!</h3>
-        <ContactForm onClick={this.onClick} onChange={this.onChange} />
+      <section className={styles.Contact}>
+        <div className={styles.innerWrapper}>
+          <h3>Send me a message!</h3>
+          <ContactForm
+            onClick={this.onClick}
+            onChange={this.onChange} />
+        </div>
       </section>
     );
   }
