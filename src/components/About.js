@@ -1,9 +1,11 @@
 import React from 'react';
 
+import styles from '../styles/_About.scss';
+
 const About = () => {
   return (
-    <section>
-      <div>
+    <section className={styles.About}>
+      <div className={styles.innerWrapper}>
         <h2>ABOUT MEEE!!!</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pulvinar,
         dolor ac pulvinar pharetra, lorem nunc luctus libero, id bibendum neque arcu
