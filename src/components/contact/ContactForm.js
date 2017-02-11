@@ -18,7 +18,11 @@ const ContactForm = props => {
       </label>
 
       <label htmlFor="subject">Subject:
-        <select name="subject">
+        <select
+          value={props.subjectValue}
+          name="subject"
+          onChange={props.onChange}>
+
           <option value="Project Management">Project Management</option>
           <option value="Launch Strategy">Launch Strategy</option>
           <option value="Marketing Campaigns">Marketing Campaigns</option>
@@ -27,7 +31,11 @@ const ContactForm = props => {
       </label>
 
       <label htmlFor="message">Message:
-        <textarea type="text" name="message" rows="3" onChange={props.onChange} />
+        <textarea
+          type="text"
+          name="message"
+          rows="3"
+          onChange={props.onChange} />
       </label>
       <input type="submit" value="SEND" onClick={props.onClick} />
     </form>
@@ -36,7 +44,8 @@ const ContactForm = props => {
 
 ContactForm.propTypes = {
   onChange: PropTypes.func,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  subjectValue: PropTypes.string.isRequired
 };
 
 export default ContactForm;
