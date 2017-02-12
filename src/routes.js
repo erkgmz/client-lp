@@ -7,6 +7,7 @@ import About from './components/About';
 import Work from './components/Work';
 import NotFound from './components/NotFound';
 import Contact from './components/contact/Contact';
+import Thanks from './components/Thanks';
 
 export default (
   <Route path="/" component={App}>
@@ -14,6 +15,7 @@ export default (
     <Route path="/about" component={About} />
     <Route path="/work" component={Work} />
     <Route path="/contact" component={Contact} />
+    <Route path="/thanks" component={Thanks} />
     <Route path="/*" component={NotFound} />
   </Route>
 );

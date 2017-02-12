@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {browserHistory} from 'react-router';
 import ContactForm from './ContactForm';
+import Thanks from '../Thanks';
 
 import {postMessage} from '../../api/contactApi';
 
@@ -63,28 +65,35 @@ class Contact extends Component {
     }
   }
 
+  handleResponse(response) {
+    const {statusCode} = response.response;
+
+    if(statusCode === 202) {
+      browserHistory.push('/thanks');
+    }
+  }
+
   onChange(event){
     event.preventDefault();
 
     if(event.target.name === 'name') {
+      this.validNameField();
       this.setState({ name: event.target.value });
     }
 
     if(event.target.name === 'email') {
+      this.validEmailField();
       this.setState({ email: event.target.value });
     }
 
     if(event.target.name === 'message') {
+      this.validMessageField();
       this.setState({ message: event.target.value });
     }
 
     if(event.target.name === 'subject') {
       this.setState({ subject: event.target.value });
     }
-
-    this.validMessageField();
-    this.validEmailField();
-    this.validNameField();
   }
 
   onClick(event) {
@@ -97,11 +106,11 @@ class Contact extends Component {
       const data = {name, email, subject, message};
 
       postMessage(data)
-        .then(response => alert('Your message has been sent')) //eslint-disable-line
+        // .then(response => alert('Your message has been sent')) //eslint-disable-line
+        .then(response => this.handleResponse(response)) //eslint-disable-line
         .catch(error => alert('Something went wrong. Try again.')); //eslint-disable-line
     } else {
       alert(this.state.error);
-      console.log(this.state);
     }
   }
 
