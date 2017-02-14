@@ -37,7 +37,12 @@ const ContactForm = props => {
           rows="3"
           onChange={props.onChange} />
       </label>
-      <input type="submit" value="SEND" onClick={props.onClick} />
+
+      <input
+        type="submit"
+        value={props.buttonLabel}
+        onClick={props.onClick} />
+
     </form>
   );
 };
@@ -45,7 +50,8 @@ const ContactForm = props => {
 ContactForm.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
-  subjectValue: PropTypes.string.isRequired
+  subjectValue: PropTypes.string.isRequired,
+  buttonLabel: PropTypes.string.isRequired
 };
 
 export default ContactForm;

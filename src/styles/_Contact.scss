@@ -16,6 +16,18 @@
         margin: 1rem 0;
       }
 
+      input,
+      textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+      }
+
+      textarea {
+        resize: none;
+      }
+
       input[type="submit"] {
         background: $theme-accent;
         border: none;

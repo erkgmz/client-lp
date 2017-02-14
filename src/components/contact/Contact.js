@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
 import ContactForm from './ContactForm';
-import Thanks from '../Thanks';
 
 import {postMessage} from '../../api/contactApi';
 
@@ -16,23 +15,16 @@ class Contact extends Component {
       email: '',
       message: '',
       subject: 'Project Management',
-      error: 'Please enter your name'
+      error: 'Please enter your name',
+      sending: false
     };
 
     this.onClick = this.onClick.bind(this);
     this.onChange = this.onChange.bind(this);
   }
 
-  checkEmptyField(field) {
-    if(field === '') {
-      return false;
-    } else {
-      return true;
-    }
-  }
-
   validNameField() {
-    const validName = this.checkEmptyField(this.state.name);
+    const validName = this.state.name !== '';
 
     if(validName) {
       return true;
@@ -46,7 +38,7 @@ class Contact extends Component {
     let reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const validEmail = reg.test(this.state.email);
 
-    if( validEmail ) {
+    if(validEmail) {
       return true;
     } else {
       this.setState({error: 'Please enter your email'});
@@ -55,7 +47,7 @@ class Contact extends Component {
   }
 
   validMessageField() {
-    const validMessage = this.checkEmptyField(this.state.message);
+    const validMessage = this.state.message !== '';
 
     if(validMessage) {
       return true;
@@ -67,48 +59,54 @@ class Contact extends Component {
 
   handleResponse(response) {
     const {statusCode} = response.response;
+    this.setState({sending: false});
 
     if(statusCode === 202) {
       browserHistory.push('/thanks');
     }
   }
 
+  handleError() {
+    alert('Something went wrong. Try again.');
+    this.setState({sending: false});
+  }
+
   onChange(event){
     event.preventDefault();
 
     if(event.target.name === 'name') {
-      this.validNameField();
       this.setState({ name: event.target.value });
     }
 
     if(event.target.name === 'email') {
-      this.validEmailField();
       this.setState({ email: event.target.value });
     }
 
     if(event.target.name === 'message') {
-      this.validMessageField();
       this.setState({ message: event.target.value });
     }
 
     if(event.target.name === 'subject') {
       this.setState({ subject: event.target.value });
     }
+
+    this.validMessageField();
+    this.validEmailField();
+    this.validNameField();
   }
 
   onClick(event) {
     event.preventDefault();
 
-    const validateForm = this.validMessageField() || this.validEmailField() || this.validNameField();
-
-    if(validateForm) {
+    if(this.validMessageField() && this.validEmailField() && this.validNameField()) {
       const {name, email, subject, message} = this.state;
       const data = {name, email, subject, message};
 
+      this.setState({sending: true});
+
       postMessage(data)
-        // .then(response => alert('Your message has been sent')) //eslint-disable-line
         .then(response => this.handleResponse(response)) //eslint-disable-line
-        .catch(error => alert('Something went wrong. Try again.')); //eslint-disable-line
+        .catch(error => this.handleError(error)); //eslint-disable-line
     } else {
       alert(this.state.error);
     }
@@ -122,7 +120,8 @@ class Contact extends Component {
           <ContactForm
             onClick={this.onClick}
             onChange={this.onChange}
-            subjectValue={this.state.subject} />
+            subjectValue={this.state.subject}
+            buttonLabel={this.state.sending ? 'SENDING' : 'SEND'} />
         </div>
       </section>
     );
