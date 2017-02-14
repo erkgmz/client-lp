@@ -22,7 +22,6 @@ const ContactForm = props => {
           value={props.subjectValue}
           name="subject"
           onChange={props.onChange}>
-
           <option value="Project Management">Project Management</option>
           <option value="Launch Strategy">Launch Strategy</option>
           <option value="Marketing Campaigns">Marketing Campaigns</option>

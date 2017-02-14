@@ -9,6 +9,8 @@
     form {
       display: flex;
       flex-flow: column nowrap;
+      max-width: 30rem;
+      margin: auto;
 
       label {
         display: flex;
@@ -22,6 +24,17 @@
         border: none;
         border-bottom: 1px solid black;
         outline: none;
+        border-radius: 0;
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: rgb(248, 248, 248);
+        margin-top: .6rem;
+        outline: none;
+        border: 1px solid black;
+        padding: 5px 35px 5px 5px;
       }
 
       textarea {

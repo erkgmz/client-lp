@@ -57,7 +57,6 @@ h6 {
 }
 
 p,
-a,
 input,
 textarea {
   font-family: 'Raleway', sans-serif;
@@ -68,4 +67,6 @@ textarea {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: $theme-text-color;
+  font-family: 'Raleway', sans-serif;
 }
