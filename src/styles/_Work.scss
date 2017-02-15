@@ -1,11 +1,13 @@
 .Work {
   padding: 5rem 2rem;
+  margin: auto;
 
   .innerWrapper {
     margin: auto;
 
     img {
       max-width: 100%;
+      border: 1px solid black;
     }
   }
 }

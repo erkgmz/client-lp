@@ -105,9 +105,10 @@ class Contact extends Component {
       this.setState({sending: true});
 
       postMessage(data)
-        .then(response => this.handleResponse(response)) //eslint-disable-line
-        .catch(error => this.handleError(error)); //eslint-disable-line
+        .then(response => this.handleResponse(response))
+        .catch(error => this.handleError(error));
     } else {
+      this.setState({sending: false});
       alert(this.state.error);
     }
   }
@@ -122,6 +123,7 @@ class Contact extends Component {
             onChange={this.onChange}
             subjectValue={this.state.subject}
             buttonLabel={this.state.sending ? 'SENDING' : 'SEND'} />
+
         </div>
       </section>
     );

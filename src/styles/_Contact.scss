@@ -4,12 +4,12 @@
   padding: 0 2rem;
 
   .innerWrapper {
+    padding: 0 4rem;
     margin: auto;
 
     form {
       display: flex;
       flex-flow: column nowrap;
-      max-width: 30rem;
       margin: auto;
 
       label {
@@ -45,6 +45,7 @@
         background: $theme-accent;
         border: none;
         padding: 0.6rem;
+        border-radius: 4px;
       }
     }
   }
