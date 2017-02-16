@@ -27,6 +27,7 @@ section {
   flex-flow: column nowrap;
   min-height: 100vh;
   max-width: 55rem;
+  margin: auto;
 }
 
 h1,
@@ -70,4 +71,24 @@ a {
   text-decoration: none;
   color: $theme-text-color;
   font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+  p,
+  input,
+  textarea {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  section {
+    max-width: 65rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  section {
+    max-width: 85rem;
+  }
 }

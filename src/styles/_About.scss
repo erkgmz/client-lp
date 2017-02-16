@@ -1,15 +1,25 @@
+@import './variables';
+
 .About {
+  padding: 5rem 2rem;
   margin: auto;
 
   .innerWrapper {
     margin: auto;
-    padding: 0 2rem;
 
     img {
       width: 16rem;
-      float: right;
+      float: right; // Want text to wrap image.
       margin: 0 1rem 1rem;
       border: 2px solid black;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    .innerWrapper {
+      p {
+        width: 50rem;
+      }
     }
   }
 }

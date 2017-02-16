@@ -1,13 +1,57 @@
+@import './variables';
+
 .Work {
   padding: 5rem 2rem;
   margin: auto;
 
   .innerWrapper {
     margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
 
-    img {
-      max-width: 100%;
-      border: 1px solid black;
+    .services {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-mobile) {
+    .innerWrapper {
+      .services {
+        display: flex;
+        flex-flow: row wrap;
+
+        article {
+          flex: 0 1 22rem;
+          margin: 1.6rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    .innerWrapper {
+      .services {
+        article {
+          flex: 0 1 22rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .innerWrapper {
+    .services {
+      article {
+        flex: 0 0 33%;
+        margin: 1rem;
+
+        img {
+          height: 16rem;
+        }
+      }
     }
   }
 }

@@ -9,7 +9,6 @@ export function postMessage(data) {
 // private
 function post(url, data) {
   // http://www.hartzis.me/fetch-post-express/
-
   const request = new Request(mainApi + url, {
     method: 'POST',
     body: JSON.stringify(data),

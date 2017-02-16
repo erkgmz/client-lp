@@ -27,7 +27,7 @@ const hamburgerStyle = {
   bmMenu: {
     background: '#64FFDA',
     padding: '2.5em 1.5em 0',
-    fontSize: '1.15em'
+    fontSize: '1em'
   },
 
   bmMorphShape: {
