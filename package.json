@@ -22,7 +22,7 @@
     "test": "mocha tools/testSetup.js src/**/*.spec.js --reporter progress",
     "test:watch": "npm run test -- --watch",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js",
-    "deploy": "surge ./dist"
+    "deploy": "surge ./dist tranquil-curve.surge.sh"
   },
   "author": "",
   "license": "MIT",
