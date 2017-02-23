@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Header from './components/common/Header';
+import Footer from './components/footer/Footer';
 
 import './styles/_base.scss';
 
@@ -8,6 +9,7 @@ const App = props => {
     <div>
       <Header />
       {props.children}
+      <Footer />
     </div>
   );
 };

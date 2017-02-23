@@ -30,11 +30,14 @@
       select {
         -webkit-appearance: none;
         -moz-appearance: none;
-        background: rgb(248, 248, 248);
         margin-top: .6rem;
         outline: none;
         border: 1px solid black;
-        padding: 5px 35px 5px 5px;
+        width: 100%;
+        padding: 5px;
+        border: 0;
+        border-radius: 4px;
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right rgb(248, 248, 248);
       }
 
       textarea {
@@ -48,5 +51,19 @@
         border-radius: 4px;
       }
     }
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    .innerWrapper {
+
+      h3 {
+        font-size: 4.5rem;
+      }
+
+      form {
+        margin: 0 6rem;
+      }
+    }
+
   }
 }

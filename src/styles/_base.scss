@@ -60,7 +60,9 @@ h6 {
 
 p,
 input,
-textarea {
+label,
+textarea,
+select {
   font-family: 'Raleway', sans-serif;
   color: $theme-text-color;
   font-size: 1.3rem;
@@ -76,6 +78,7 @@ a {
 @media screen and (min-width: $breakpoint-mobile) {
   p,
   input,
+  label,
   textarea {
     font-size: 1.4rem;
   }

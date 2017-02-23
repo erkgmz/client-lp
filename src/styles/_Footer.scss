@@ -1,0 +1,53 @@
+@import './variables';
+
+.Footer {
+  padding: 0 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  background: #ECEFF1;
+
+  h4 {
+    font-size: 1.7rem;
+    margin: 1rem;
+  }
+
+  a {
+    border-bottom: 1px solid $theme-accent;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      p {
+        a {
+          display: flex;
+          flex-flow: column nowrap;
+
+          i {
+            font-size: 2rem;
+            align-self: center;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .referral {
+    align-self: flex-end;
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    ul {
+      width: 50%;
+    }
+  }
+}

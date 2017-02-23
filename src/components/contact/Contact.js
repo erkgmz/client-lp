@@ -14,7 +14,7 @@ class Contact extends Component {
       name: '',
       email: '',
       message: '',
-      subject: 'Project Management',
+      subject: 'Question',
       error: 'Please enter your name',
       sending: false
     };
@@ -123,7 +123,6 @@ class Contact extends Component {
             onChange={this.onChange}
             subjectValue={this.state.subject}
             buttonLabel={this.state.sending ? 'SENDING' : 'SEND'} />
-
         </div>
       </section>
     );

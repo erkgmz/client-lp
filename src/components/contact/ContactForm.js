@@ -22,6 +22,7 @@ const ContactForm = props => {
           value={props.subjectValue}
           name="subject"
           onChange={props.onChange}>
+          <option value="Question">Question</option>
           <option value="Project Management">Project Management</option>
           <option value="Launch Strategy">Launch Strategy</option>
           <option value="Marketing Campaigns">Marketing Campaigns</option>
@@ -50,7 +51,8 @@ ContactForm.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
   subjectValue: PropTypes.string.isRequired,
-  buttonLabel: PropTypes.string.isRequired
+  buttonLabel: PropTypes.string.isRequired,
+  styles: PropTypes.object
 };
 
 export default ContactForm;
