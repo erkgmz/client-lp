@@ -35,7 +35,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -60,12 +61,20 @@ h6 {
 
 p,
 input,
-label,
 textarea,
 select {
   font-family: 'Raleway', sans-serif;
   color: $theme-text-color;
   font-size: 1.3rem;
+}
+
+input,
+textarea {
+  margin: .6rem 0;
+}
+
+label {
+  font-weight: 700;
 }
 
 a {
