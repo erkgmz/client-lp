@@ -15,14 +15,14 @@
     "open:dist": "babel-node tools/distServer.js",
     "lint": "esw webpack.config.* src tools --color",
     "lint:watch": "npm run lint -- --watch",
-    "clean-dist": "npm run remove-dist && mkdir dist",
-    "remove-dist": "rimraf ./dist",
+    "clean-dist": "npm run remove-dist && mkdir docs",
+    "remove-dist": "rimraf ./docs",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
     "build": "babel-node tools/build.js && npm run open:dist",
     "test": "mocha tools/testSetup.js src/**/*.spec.js --reporter progress",
     "test:watch": "npm run test -- --watch",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js",
-    "deploy": "surge ./dist tranquil-curve.surge.sh"
+    "deploy": "surge ./docs tranquil-curve.surge.sh"
   },
   "author": "",
   "license": "MIT",
