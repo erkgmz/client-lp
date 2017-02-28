@@ -58,7 +58,9 @@ class Contact extends Component {
   }
 
   handleResponse(response) {
+    console.log(response); //eslint-disable-line
     const {statusCode} = response.response;
+
     this.setState({sending: false});
 
     if(statusCode === 202) {
@@ -66,9 +68,17 @@ class Contact extends Component {
     }
   }
 
-  handleError() {
-    alert('Something went wrong. Try again.');
+  handleError(error) {
+    console.log(error); // eslint-disable-line
+    const {response} = error;
+    const {statusCode} = response;
+
     this.setState({sending: false});
+
+    if(statusCode === 415) {
+      console.log(response); //eslint-disable-line
+      alert('Something went wrong. Try again.');
+    }
   }
 
   onChange(event){
