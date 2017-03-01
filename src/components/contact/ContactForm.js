@@ -40,9 +40,9 @@ const ContactForm = props => {
 
       <input
         type="submit"
+        defaultValue="SEND"
         value={props.buttonLabel}
         onClick={props.onClick} />
-
     </form>
   );
 };

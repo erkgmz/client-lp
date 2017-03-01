@@ -1,5 +1,6 @@
 import 'whatwg-fetch';
-const mainApi = 'https://kailey-website-api.herokuapp.com/';
+// const mainApi = 'https://kailey-website-api.herokuapp.com/';
+const mainApi = 'http://localhost:5000/';
 
 // exposed
 export function postMessage(data) {
@@ -24,6 +25,6 @@ function onSuccess(response) {
   return response.json();
 }
 
-function onError(error) {
-  console.log(error); // eslint-disable-line no-console
+function onError(response) {
+  return response.json();
 }
