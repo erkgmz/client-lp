@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {browserHistory} from 'react-router';
+import {hashHistory} from 'react-router';
 import ContactForm from './ContactForm';
 
 import {postMessage} from '../../api/contactApi';
@@ -63,7 +63,7 @@ class Contact extends Component {
     this.setState({sending: false});
 
     if(statusCode === 202) {
-      browserHistory.push('/thanks');
+      hashHistory.push('/thanks');
     }
   }
 
