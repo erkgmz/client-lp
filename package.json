@@ -21,8 +21,7 @@
     "build": "babel-node tools/build.js && npm run open:dist",
     "test": "mocha tools/testSetup.js src/**/*.spec.js --reporter progress",
     "test:watch": "npm run test -- --watch",
-    "analyze-bundle": "babel-node ./tools/analyzeBundle.js",
-    "deploy": "surge docs/ tranquil-curve.surge.sh"
+    "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
   "author": "",
   "license": "MIT",
