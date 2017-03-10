@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from '../styles/_About.scss';
-import kHeadshot from '../assets/k_headshot.jpg';
+// import kHeadshot from '../assets/k_headshot.jpg';
 
 const About = () => {
   return (
