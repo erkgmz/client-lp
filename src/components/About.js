@@ -8,7 +8,7 @@ const About = () => {
     <section className={styles.About}>
       <div className={styles.innerWrapper}>
         <h2>ABOUT</h2>
-        <img src={kHeadshot} />
+        <img src="http://www.fillmurray.com/300/320" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pulvinar,
         dolor ac pulvinar pharetra, lorem nunc luctus libero, id bibendum neque arcu
         nec metus. Curabitur rutrum lobortis dui, at pellentesque dui semper sit
