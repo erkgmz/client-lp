@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <section className={styles.Home}>
       <div className={styles.copyBlock}>
-        <h1>Hi! I'm Kailey</h1>
-        <h4>Marketing Professional & Launch Strategist in Bakersfield, CA.</h4>
+        <h4>This site is currently under development.</h4>
+        <p>I am currently unavailable for marketing projects. Check me out on <a href="https://www.linkedin.com/in/kaileystein/">LinkedIn</a> or send me a message.</p>
         <ContactButton />
       </div>
     </section>

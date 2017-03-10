@@ -5,5 +5,11 @@
 
   .copyBlock {
     margin: auto;
+
+    p {
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 }
