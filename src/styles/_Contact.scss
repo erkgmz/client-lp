@@ -4,13 +4,13 @@
   padding: 0 2rem;
 
   .innerWrapper {
-    padding: 0 4rem;
-    margin: auto;
+    margin: auto 0;
 
     form {
       display: flex;
       flex-flow: column nowrap;
       margin: auto;
+      max-width: 75%;
 
       label {
         display: flex;
@@ -47,21 +47,24 @@
       input[type="submit"] {
         background: $theme-accent;
         border: none;
-        padding: 0.6rem;
+        padding: 0.6rem 3rem;
         border-radius: 4px;
+        align-self: flex-end;
       }
     }
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
     .innerWrapper {
+      padding: 0 4rem;
 
       h3 {
         font-size: 4.5rem;
       }
 
       form {
-        margin: 0 6rem;
+        // margin: 0 6rem;
+        padding: 0 2rem;
       }
     }
   }

@@ -123,7 +123,7 @@ class Contact extends Component {
     return (
       <section className={styles.Contact}>
         <div className={styles.innerWrapper}>
-          <h3>Send me a message!</h3>
+          <h3>Contact Me</h3>
           <ContactForm
             onClick={this.onClick}
             onChange={this.onChange}
