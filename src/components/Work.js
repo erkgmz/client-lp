@@ -1,8 +1,8 @@
 import React from 'react';
 
-import pmPhoto from '../assets/teamwork.png';
-import launchPhoto from '../assets/launch.png';
-import campaignPhoto from '../assets/campaigns.jpg';
+// import pmPhoto from '../assets/teamwork.png';
+// import launchPhoto from '../assets/launch.png';
+// import campaignPhoto from '../assets/campaigns.jpg';
 
 import styles from '../styles/_Work.scss';
 
@@ -11,27 +11,30 @@ const Work = () => {
     <section className={styles.Work}>
       <div className={styles.innerWrapper}>
         <h2>Work</h2>
-        <p>I've planned and implemented large campaign strategies, and product launches</p>
+        <p>Nullam arcu purus, convallis a metus non, egestas varius dui.</p>
         <div className={styles.services}>
           <article>
-            <img src={pmPhoto} />
-            <h3>Project Management</h3>
+            {/*<img src={pmPhoto} />*/}
+            <img src="http://fpoimg.com/350x200?text=FPO" />
+            <h3>Si quicquam extra</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu purus,
             convallis a metus non, egestas varius dui. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla ut neque vulputate, interdum felis vestibulum, dictum sem.
             Cras euismod justo vel rhoncus euismod.</p>
           </article>
           <article>
-            <img src={launchPhoto} />
-            <h3>Launch Strategy</h3>
+            {/*<img src={launchPhoto} />*/}
+            <img src="http://fpoimg.com/350x200?text=FPO" />
+            <h3>Ipsum rogavi?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu purus,
             convallis a metus non, egestas varius dui. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla ut neque vulputate, interdum felis vestibulum, dictum sem.
             Cras euismod justo vel rhoncus euismod.</p>
           </article>
           <article>
-            <img src={campaignPhoto} />
-            <h3>Marketing Campaigns</h3>
+            {/*<img src={campaignPhoto} />*/}
+            <img src="http://fpoimg.com/350x200?text=FPO" />
+            <h3>Paria sunt igitur</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu purus,
             convallis a metus non, egestas varius dui. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla ut neque vulputate, interdum felis vestibulum, dictum sem.
